@@ -1,0 +1,1091 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Детский нейропсихологический центр «Пронейрон» — Ставрополь и Михайловск</title>
+    <meta name="description"
+          content="Клиника детской неврологии и реабилитации. Экспертная нейродиагностика, запуск речи, АВА-терапия и сенсорная интеграция в Ставрополе и Михайловске."/>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+    <!-- JS Script -->
+    <script src="/script.js" defer></script>
+</head>
+<body class="min-h-screen bg-white text-slate-900 font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
+
+<!-- 1. Topmost Dark Blue Loyalty Bar -->
+<div class="bg-[#015382] text-white text-[12px] font-medium py-1.5 px-4 text-center">
+    <a href="#educational" class="hover:underline transition-all inline-block">
+        Подключиться к программе лояльности в МАХ
+    </a>
+</div>
+
+<!-- 2. Main Header Bar -->
+<header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5 shrink-0 group">
+            <div class="w-12 h-12 rounded-xl flex flex-col items-center justify-center text-white p-1 shadow-xs group-hover:scale-105 transition-transform">
+                <img src="images/proneiron.png" alt="">
+            </div>
+            <div>
+                <div class="flex items-center gap-1 font-black text-lg sm:text-xl tracking-tight text-slate-900 leading-none">
+                    <span>ПРОНЕЙРОН</span>
+                    <span class="text-slate-300 font-light text-base">|</span>
+                </div>
+                <span class="block text-[9px] sm:text-[10px] text-slate-600 font-bold uppercase tracking-wider leading-snug">
+                    детский нейропсихологический центр
+                </span>
+            </div>
+        </a>
+
+        <!-- Branch Address Switchers -->
+        <div class="hidden xl:flex items-center gap-6 text-xs text-slate-700">
+            <button data-branch="stavropol" class="branch-switcher-btn text-left transition-colors cursor-pointer active">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-rose-600 shrink-0"></span>
+                    <span class="font-extrabold text-slate-900">Ставрополь</span>
+                </div>
+                <span class="text-[11px] text-slate-500 block pl-3.5">ул. Пирогова, д. 15/1</span>
+            </button>
+
+            <button data-branch="mikhailovsk" class="branch-switcher-btn text-left transition-colors cursor-pointer">
+                <div class="flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-rose-600 shrink-0"></span>
+                    <span class="font-extrabold text-slate-900">Михайловск</span>
+                </div>
+                <span class="text-[11px] text-slate-500 block pl-3.5">ул. Ленина, д. 120/2</span>
+            </button>
+        </div>
+
+        <!-- Social Icons -->
+        <div class="hidden lg:flex items-center gap-1.5">
+            <a href="https://wa.me/79624001100" target="_blank" rel="noreferrer" title="WhatsApp"
+               class="w-7 h-7 rounded-full bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366] hover:text-white flex items-center justify-center text-xs font-bold transition-all">
+                WA
+            </a>
+            <a href="https://t.me/proneuron26" target="_blank" rel="noreferrer" title="Telegram"
+               class="w-7 h-7 rounded-full bg-[#0088cc]/10 text-[#0088cc] hover:bg-[#0088cc] hover:text-white flex items-center justify-center text-xs transition-all">
+                TG
+            </a>
+            <a href="#" title="VK"
+               class="w-7 h-7 rounded-full bg-[#0077FF]/10 text-[#0077FF] hover:bg-[#0077FF] hover:text-white flex items-center justify-center text-xs font-bold transition-all">
+                VK
+            </a>
+            <a href="#" title="OK"
+               class="w-7 h-7 rounded-full bg-[#FF8E00]/10 text-[#FF8E00] hover:bg-[#FF8E00] hover:text-white flex items-center justify-center text-xs font-bold transition-all">
+                ОК
+            </a>
+        </div>
+
+        <!-- Working Hours & Phone -->
+        <div class="hidden sm:block text-right">
+          <span class="block text-[11px] text-slate-500 font-medium current-branch-hours">
+            Ежедневно с 08:30 до 20:00
+          </span>
+            <a href="tel:79624001100" class="block text-base sm:text-lg font-black text-[#005FA3] hover:text-blue-800 transition-colors tracking-tight">
+                +7 (962) 400-11-00
+            </a>
+        </div>
+
+        <!-- Action Button -->
+        <div class="flex items-center gap-2">
+            <button data-open-modal="true"
+                    class="px-5 py-2.5 rounded-full bg-[#005FA3] hover:bg-[#004A80] text-white font-extrabold text-xs sm:text-sm shadow-xs transition-all cursor-pointer whitespace-nowrap">
+                Заказать звонок
+            </button>
+
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-toggle" class="lg:hidden p-2 text-slate-600 hover:text-slate-900 rounded-lg hover:bg-slate-100" aria-label="Меню">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="border-t border-slate-100 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+            <nav class="hidden lg:flex justify-between gap-6 py-2.5 text-xs sm:text-sm font-semibold text-slate-700 w-[100%]">
+                <a href="#services" class="hover:text-[#005FA3] transition-colors">Услуги</a>
+                <a href="#services" class="hover:text-[#005FA3] transition-colors">Цены</a>
+                <a href="#conditions" class="hover:text-[#005FA3] transition-colors">Что мы лечим</a>
+                <a href="#specialists" class="hover:text-[#005FA3] transition-colors">Специалисты</a>
+                <a href="#methodology" class="hover:text-[#005FA3] transition-colors">Авторская методика</a>
+                <a href="#three-pillars" class="hover:text-[#005FA3] transition-colors">О сети</a>
+                <a href="#reviews" class="hover:text-[#005FA3] transition-colors">Пациенту</a>
+                <a href="#contacts" class="hover:text-[#005FA3] transition-colors">Клиники</a>
+                <a href="#contacts" class="hover:text-[#005FA3] transition-colors">Контакты</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="lg:hidden hidden bg-white border-b border-slate-200 px-4 py-5 space-y-4">
+        <div class="flex items-center justify-between bg-slate-100 rounded-lg p-1">
+            <button data-branch="stavropol" class="branch-switcher-btn flex-1 py-1.5 text-xs font-bold rounded-md text-center active">г. Ставрополь</button>
+            <button data-branch="mikhailovsk" class="branch-switcher-btn flex-1 py-1.5 text-xs font-bold rounded-md text-center">г. Михайловск</button>
+        </div>
+        <div class="flex flex-col space-y-3 font-semibold text-slate-800 text-sm">
+            <a href="#services" class="py-1">Услуги и Прайс</a>
+            <a href="#conditions" class="py-1">Что мы лечим</a>
+            <a href="#specialists" class="py-1">Специалисты</a>
+            <a href="#methodology" class="py-1">Авторская методика</a>
+            <a href="#reviews" class="py-1">Отзывы клиентов</a>
+            <a href="#contacts" class="py-1">Контакты и Клиники</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- 4. Hero Section -->
+    <section class="relative bg-gradient-to-b from-[#E6F3FB] via-[#EDF7FD] to-[#F2F8FC] pt-8 overflow-hidden">
+
+        <!-- Background Doodle Vector Decorations -->
+        <!-- Brain doodle bottom left -->
+        <div class="absolute bottom-6 left-4 sm:left-12 opacity-30 pointer-events-none z-0">
+            <svg width="120" height="120" viewBox="0 0 100 100" fill="none" stroke="#237CB7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M30,50 C20,40 20,25 35,20 C45,15 50,25 50,30 C50,25 55,15 65,20 C80,25 80,40 70,50 C80,60 75,75 60,80 C50,85 50,75 50,70 C50,75 50,85 40,80 C25,75 20,60 30,50 Z"></path>
+                <path d="M50,30 L50,70"></path>
+                <path d="M35,35 C42,40 42,50 35,55"></path>
+                <path d="M65,35 C58,40 58,50 65,55"></path>
+            </svg>
+        </div>
+
+        <!-- Sparkles/Star doodle top right -->
+        <div class="absolute top-12 right-6 sm:right-16 opacity-30 pointer-events-none z-0">
+            <svg width="90" height="90" viewBox="0 0 80 80" fill="none" stroke="#237CB7" stroke-width="2.5" stroke-linecap="round">
+                <path d="M40 10 L40 70 M10 40 L70 40 M20 20 L60 60 M60 20 L20 60"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex justify-center">
+
+                <!-- Hero Left Content -->
+                <div class="lg:col-span-6 space-y-6">
+
+                    <!-- Main Title -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-[58px] font-black tracking-tight leading-[1.08]">
+                        <span class="text-[#005FA3] block">детский нейропсихологический</span>
+                        <span class="text-slate-950 block">центр</span>
+                    </h1>
+
+                    <!-- Highlighted Pill Text -->
+                    <div class="pt-1">
+                        <a href="#doctors-reviews"
+                           class="inline-block px-3 py-1.5 rounded-sm bg-[#D3E8F8] text-[#005FA3] font-bold text-xs sm:text-sm hover:bg-[#C2E0F5] transition-colors">
+                            Нас рекомендуют ведущие врачи России
+                        </a>
+                    </div>
+
+                    <!-- Main Pink/Red CTA Button -->
+                    <div class="pt-3">
+                        <button data-open-modal="true"
+                                class="px-10 py-4 rounded-full bg-[#FF004B] hover:bg-[#E0003F] text-white font-extrabold text-lg sm:text-xl shadow-lg shadow-rose-600/20 active:scale-98 transition-all cursor-pointer">
+                            Записаться
+                        </button>
+                    </div>
+
+                    <!-- Doctors Avatars + Hand-drawn Arrow + Label -->
+                    <div class="pt-4 flex items-center gap-4 relative">
+                        <div class="flex items-center -space-x-2.5">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;q=80&amp;w=100"
+                                 alt="Специалист 1" class="w-11 h-11 rounded-full border-2 border-white object-cover shadow-2xs">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&amp;fit=crop&amp;q=80&amp;w=100" alt="Специалист 2"
+                                 class="w-11 h-11 rounded-full border-2 border-white object-cover shadow-2xs">
+                            <img src="https://images.unsplash.com/photo-1594824813566-88855ce78905?auto=format&amp;fit=crop&amp;q=80&amp;w=100"
+                                 alt="Специалист 3" class="w-11 h-11 rounded-full border-2 border-white object-cover shadow-2xs">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&amp;fit=crop&amp;q=80&amp;w=100"
+                                 alt="Специалист 4" class="w-11 h-11 rounded-full border-2 border-white object-cover shadow-2xs">
+                            <div class="w-11 h-11 rounded-full bg-[#005FA3] text-white font-extrabold text-xs flex items-center justify-center border-2 border-white shadow-2xs">
+                                +45
+                            </div>
+                        </div>
+
+                        <!-- Hand-drawn curling blue arrow pointing down & right to label -->
+                        <div class="flex items-center gap-2 pl-1">
+                            <svg width="55" height="35" viewBox="0 0 60 40" fill="none" stroke="#005FA3" stroke-width="2.5" stroke-linecap="round"
+                                 stroke-linejoin="round">
+                                <path d="M5 10 C 15 35, 30 38, 48 20"></path>
+                                <path d="M38 18 L50 18 L48 30"></path>
+                            </svg>
+                            <div class="text-[#005FA3] text-xs font-bold leading-tight">
+                                <div>Специалистов</div>
+                                <div>в штате</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Hero Right Image (Doctor & Child photo cutout with sun rays) -->
+                <div class="lg:col-span-6 relative flex justify-center lg:justify-end">
+                    <div class="relative w-full max-w-lg flex flex-col items-center">
+
+                        <!-- Sunburst rays above boy's head -->
+                        <div class="absolute -top-7 left-1/3 z-20 text-[#005FA3]">
+                            <svg width="45" height="30" viewBox="0 0 45 30" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                                <path d="M10 25 L3 8"></path>
+                                <path d="M22 25 L22 4"></path>
+                                <path d="M34 25 L41 8"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Doctor & Boy image cutout -->
+                        <div class="relative z-10 w-full drop-shadow-xl">
+                            <img type="image/webp" src="images/slide_p1.webp" alt="Врач и ребенок — Нейроспектр" class="w-full h-auto object-cover rounded-3xl">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!--             Bottom 3 Floating Feature Cards (Overlapping Hero Bottom) -->
+        </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-5 relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-[-45px]">
+
+        <!-- Card 1 -->
+        <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.06)] border border-slate-100 flex items-start gap-4 hover:shadow-lg transition-all">
+            <div class="w-10 h-10 rounded-xl bg-[#FF004B] text-white flex items-center justify-center shrink-0 p-2.5 shadow-2xs">
+                <div class="w-full h-full border-2 border-white rounded-2xs bg-white/20"></div>
+            </div>
+            <div class="space-y-1">
+                <h3 class="font-extrabold text-[#FF004B] text-sm sm:text-base">Комплексный подход</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Совмещаем нейропсихологию, психотерапию и реабилитацию.</p>
+                <a href="#complex-approach" class="inline-block text-xs font-bold text-[#FF004B] hover:underline pt-1">Подробнее</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.06)] border border-slate-100 flex items-start gap-4 hover:shadow-lg transition-all">
+            <div class="w-10 h-10 rounded-xl bg-[#FFA800] text-white flex items-center justify-center shrink-0 p-2.5 shadow-2xs">
+                <div class="w-full h-full border-2 border-white rounded-2xs bg-white/20"></div>
+            </div>
+            <div class="space-y-1">
+                <h3 class="font-extrabold text-[#FFA800] text-sm sm:text-base">Авторская методика</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Уникальные программы на основе науки и опыта.</p>
+                <a href="#complex-approach" class="inline-block text-xs font-bold text-[#FFA800] hover:underline pt-1">Подробнее</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white p-5 sm:p-6 rounded-2xl shadow-[0_8px_25px_rgba(0,0,0,0.06)] border border-slate-100 flex items-start gap-4 hover:shadow-lg transition-all">
+            <div class="w-10 h-10 rounded-xl bg-[#005FA3] text-white flex items-center justify-center shrink-0 p-2.5 shadow-2xs">
+                <div class="w-full h-full border-2 border-white rounded-2xs bg-white/20"></div>
+            </div>
+            <div class="space-y-1">
+                <h3 class="font-extrabold text-[#005FA3] text-sm sm:text-base">Наши результаты</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">Помогли тысячам маленьких пациентов добиться успехов.</p>
+                <a href="#doctors-reviews" class="inline-block text-xs font-bold text-[#005FA3] hover:underline pt-1">Подробнее</a>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="diseases" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                <div class="space-y-2">
+              <span class="text-xs sm:text-sm font-bold text-[#005FA3]">
+                Специализируемся на достижении лучших результатов!
+              </span>
+                    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
+                        «Пронейрон» — лидер в лечении:
+                    </h2>
+                </div>
+
+                <div>
+                    <button data-open-modal="true"
+                            class="px-5 py-2.5 rounded-full border-2 border-[#005FA3] text-[#005FA3] font-bold text-xs hover:bg-[#005FA3] hover:text-white transition-all cursor-pointer whitespace-nowrap">
+                        Все заболевания
+                    </button>
+                </div>
+            </div>
+
+            <!-- Horizontal Cards List -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+
+                <div class="bg-[#F0F7FD] p-6 rounded-2xl space-y-4 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="font-black text-slate-900 text-lg">РАС</div>
+                        <p class="text-xs text-slate-600 mt-3">Расстройство аутистического спектра</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#F0F7FD] p-6 rounded-2xl space-y-4 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="font-black text-slate-900 text-lg">ЗРР</div>
+                        <p class="text-xs text-slate-600 mt-3">Задержка речевого развития</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#F0F7FD] p-6 rounded-2xl space-y-4 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="font-black text-slate-900 text-lg">ЗПРР</div>
+                        <p class="text-xs text-slate-600 mt-3">Задержка психоречевого развития</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#F0F7FD] p-6 rounded-2xl space-y-4 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="font-black text-slate-900 text-lg">ДЦП</div>
+                        <p class="text-xs text-slate-600 mt-3">Детский церебральный паралич</p>
+                    </div>
+                </div>
+
+                <div class="bg-[#F0F7FD] p-6 rounded-2xl space-y-4 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="font-black text-slate-900 text-lg">Нервные тики</div>
+                    </div>
+                </div>
+
+                <div class="bg-[#F0F7FD] p-6 rounded-2xl space-y-4 hover:shadow-md transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="font-black text-slate-900 text-lg">Заикание</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom progress scrollbar indicator -->
+            <div class="w-full bg-slate-100 h-1 rounded-full overflow-hidden max-w-xl mx-auto">
+                <div class="bg-[#005FA3] h-full w-1/3 rounded-full"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="doctors-reviews" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
+                О нас говорят <span class="text-[#005FA3]">ведущие врачи России</span>
+            </h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+
+                <!-- Doctor Select Buttons (Left) -->
+                <div class="lg:col-span-4 space-y-3">
+                    <button data-doc-key="mohov"
+                            class="doctor-review-select-btn w-full p-4 rounded-2xl border border-blue-500 bg-white shadow-md text-left flex items-center gap-3 hover:bg-white transition-all cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&amp;fit=crop&amp;q=80&amp;w=120" alt="Мохов Д.Е."
+                             class="w-12 h-12 rounded-full object-cover shrink-0">
+                        <div class="space-y-0.5">
+                            <div class="font-bold text-slate-900 text-sm">Мохов Д.Е.</div>
+                            <div class="text-[11px] text-slate-500 line-clamp-2">Доктор медицинских наук, профессор, главный внештатный специалист...</div>
+                        </div>
+                    </button>
+
+                    <button data-doc-key="cherepahina"
+                            class="doctor-review-select-btn w-full p-4 rounded-2xl border border-transparent bg-slate-50 text-left flex items-center gap-3 hover:bg-white transition-all cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1594824813566-88855ce78905?auto=format&amp;fit=crop&amp;q=80&amp;w=120"
+                             alt="Черепахина С. И." class="w-12 h-12 rounded-full object-cover shrink-0">
+                        <div class="space-y-0.5">
+                            <div class="font-bold text-slate-900 text-sm">Черепахина С. И.</div>
+                            <div class="text-[11px] text-slate-500 line-clamp-2">Терапевт, физиотерапевт, врач первой категории...</div>
+                        </div>
+                    </button>
+
+                    <button data-doc-key="sologubov"
+                            class="doctor-review-select-btn w-full p-4 rounded-2xl border border-transparent bg-slate-50 text-left flex items-center gap-3 hover:bg-white transition-all cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&amp;fit=crop&amp;q=80&amp;w=120" alt="Сологубов Е.Г."
+                             class="w-12 h-12 rounded-full object-cover shrink-0">
+                        <div class="space-y-0.5">
+                            <div class="font-bold text-slate-900 text-sm">Сологубов Е.Г.</div>
+                            <div class="text-[11px] text-slate-500 line-clamp-2">Заслуженный врач РФ, д.м.н., профессор...</div>
+                        </div>
+                    </button>
+                </div>
+
+                <!-- Video Preview Center -->
+                <div class="lg:col-span-4 relative rounded-3xl overflow-hidden min-h-[320px] bg-slate-900 flex items-center justify-center group cursor-pointer"
+                     data-open-modal="true">
+                    <img id="doctor-review-img" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&amp;fit=crop&amp;q=80&amp;w=600"
+                         alt="Доктор видео" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-300">
+                    <!-- Yellow Play Button -->
+                    <div class="absolute w-16 h-16 rounded-full bg-[#FFB800] text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 fill-current ml-1" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"></path>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Testimonial Quote Right -->
+                <div class="lg:col-span-4 bg-[#F0F7FD] p-6 sm:p-8 rounded-3xl flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div>
+                            <h4 id="doctor-review-name" class="font-extrabold text-slate-900 text-base">Мохов Д.Е.</h4>
+                            <p id="doctor-review-title" class="text-xs text-slate-500 leading-normal mt-1">
+                                Доктор медицинских наук, профессор, врач остеопат, Главный внештатный специалист по остеопатии Минздрава РФ, Президент
+                                Российской остеопатической ассоциации, Главный редактор Российского остеопатического журнала
+                            </p>
+                        </div>
+                        <blockquote id="doctor-review-quote" class="text-xs sm:text-sm text-[#005FA3] font-medium leading-relaxed italic">
+                            «Методика лечения является уникальной и высокоэффективной благодаря сочетанию медицинского, коррекционно-педагогического и
+                            моторно-функционального воздействия»
+                        </blockquote>
+                    </div>
+
+                    <div>
+                        <button data-open-modal="true"
+                                class="w-full py-2.5 rounded-full border-2 border-[#005FA3] text-[#005FA3] font-bold text-xs hover:bg-[#005FA3] hover:text-white transition-all cursor-pointer">
+                            Ознакомиться с рецензией
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 7. 3 Pillars Section -->
+    <section id="three-pillars" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-bold text-xs uppercase tracking-wider">
+              3 Кита нашей работы
+            </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
+                    Почему центр «Пронейрон» добивается устойчивых результатов?
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-700 font-extrabold text-xl flex items-center justify-center">1</div>
+                    <h3 class="text-xl font-extrabold text-slate-900">Команда экспертов</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Более 12 лет опыта. Мультидисциплинарная связка: нейропсихологи, дефектологи, логопеды и АВА-терапевты работают вместе над каждым
+                        ребенком.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-700 font-extrabold text-xl flex items-center justify-center">2</div>
+                    <h3 class="text-xl font-extrabold text-slate-900">Авторские программы</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        7-этапная авторская система ИП Любченко А.Г. Пошаговый индивидуальный маршрут развитие мозга и запуск речи без жестких медикаментов.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl border border-slate-200/80 shadow-md space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 font-extrabold text-xl flex items-center justify-center">3</div>
+                    <h3 class="text-xl font-extrabold text-slate-900">Спецоборудование</h3>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Оборудованный сенсорный зал, интерактивные балансиры Balametrics, Томатис-аппаратура и зоны для дефектологических занятий.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. 7 Steps Methodology -->
+    <section id="methodology" class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-bold text-xs uppercase tracking-wider">
+              Авторский метод ИП Любченко А.Г.
+            </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
+                    7 Шагов нейромаршрута «Пронейрон»
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <span class="text-2xl font-black text-blue-600">01</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Входная нейродиагностика</h4>
+                    <p class="text-xs text-slate-600">Выявление поражений и задержек ЦНС на раннем этапе.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <span class="text-2xl font-black text-blue-600">02</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Консилиум специалистов</h4>
+                    <p class="text-xs text-slate-600">Совместное обсуждение случая логопедом и нейропсихологом.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <span class="text-2xl font-black text-blue-600">03</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Карта нейромаршрута</h4>
+                    <p class="text-xs text-slate-600">Индивидуальный график процедур и запуск реакций.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <span class="text-2xl font-black text-blue-600">04</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Модульные занятия</h4>
+                    <p class="text-xs text-slate-600">Нейрогимнастика + Сенсорный зал + Мозжечковая стимуляция.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <span class="text-2xl font-black text-blue-600">05</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Замер динамики</h4>
+                    <p class="text-xs text-slate-600">Промежуточное тестирование каждые 2 месяца.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
+                    <span class="text-2xl font-black text-blue-600">06</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Подключение АВА / Речи</h4>
+                    <p class="text-xs text-slate-600">Закрепление фразовой речи и бытовых социальных навыков.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2 sm:col-span-2 lg:col-span-2 bg-blue-50 border-blue-200">
+                    <span class="text-2xl font-black text-blue-600">07</span>
+                    <h4 class="font-bold text-slate-900 text-sm">Полная социализация</h4>
+                    <p class="text-xs text-slate-600">Ребенок готов к посещению детского сада и общеобразовательной школы!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Specialists Section -->
+    <section id="specialists" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-bold text-xs uppercase tracking-wider">
+              Наши эксперты
+            </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
+                    Врачи и клинические психологи центра «Пронейрон»
+                </h2>
+            </div>
+
+            <!-- Specialist Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Spec 1 -->
+                <div data-branches="stavropol,mikhailovsk"
+                     class="specialist-card bg-white rounded-3xl p-6 border border-slate-200 shadow-md flex flex-col justify-between space-y-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400" alt="Любченко А.Г."
+                             class="w-full h-56 object-cover rounded-2xl"/>
+                        <div>
+                            <span class="text-[11px] font-bold text-blue-600 uppercase">Опыт 12 лет • Ставрополь / Михайловск</span>
+                            <h3 class="text-lg font-extrabold text-slate-900">Любченко Анна Георгиевна</h3>
+                            <p class="text-xs text-slate-500 font-semibold">Руководитель центра, главный нейропсихолог</p>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Основатель, эксперт по авторским программам нейрокоррекции при РАС, ЗПРР, СДВГ.
+                        </p>
+                    </div>
+                    <button data-open-modal="true" data-specialist-id="spec-lyubchenko"
+                            class="w-full py-3 rounded-xl bg-blue-600 text-white font-extrabold text-xs hover:bg-blue-700 transition-all">
+                        Записаться к специалисту →
+                    </button>
+                </div>
+
+                <!-- Spec 2 -->
+                <div data-branches="stavropol"
+                     class="specialist-card bg-white rounded-3xl p-6 border border-slate-200 shadow-md flex flex-col justify-between space-y-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=400" alt="Кожевникова Е.А."
+                             class="w-full h-56 object-cover rounded-2xl"/>
+                        <div>
+                            <span class="text-[11px] font-bold text-blue-600 uppercase">Опыт 8 лет • Ставрополь</span>
+                            <h3 class="text-lg font-extrabold text-slate-900">Кожевникова Екатерина Андреевна</h3>
+                            <p class="text-xs text-slate-500 font-semibold">Медицинский психолог</p>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Специализируется на комплексной патопсихологической диагностике эмоций и внимания.
+                        </p>
+                    </div>
+                    <button data-open-modal="true" data-specialist-id="spec-kozhevnikova"
+                            class="w-full py-3 rounded-xl bg-blue-600 text-white font-extrabold text-xs hover:bg-blue-700 transition-all">
+                        Записаться к специалисту →
+                    </button>
+                </div>
+
+                <!-- Spec 3 -->
+                <div data-branches="stavropol,mikhailovsk"
+                     class="specialist-card bg-white rounded-3xl p-6 border border-slate-200 shadow-md flex flex-col justify-between space-y-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1594824813566-88855ce78905?auto=format&fit=crop&q=80&w=400" alt="Савельева М.А."
+                             class="w-full h-56 object-cover rounded-2xl"/>
+                        <div>
+                            <span class="text-[11px] font-bold text-blue-600 uppercase">Опыт 9 лет • Ставрополь / Михайловск</span>
+                            <h3 class="text-lg font-extrabold text-slate-900">Савельева Марина Александровна</h3>
+                            <p class="text-xs text-slate-500 font-semibold">Медицинский психолог, АВА-терапевт</p>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Поведенческий анализ, альтернативная коммуникация PECS, социализация при РАС.
+                        </p>
+                    </div>
+                    <button data-open-modal="true" data-specialist-id="spec-savelyeva"
+                            class="w-full py-3 rounded-xl bg-blue-600 text-white font-extrabold text-xs hover:bg-blue-700 transition-all">
+                        Записаться к специалисту →
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Pricing & Course Calculator -->
+    <section id="services" class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-bold text-xs uppercase tracking-wider">
+              Услуги и Стоимость
+            </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
+                    Прозрачные цены и калькулятор занятий
+                </h2>
+            </div>
+
+            <!-- Services List Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600">90 минут</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Экспертная нейродиагностика</h3>
+                        <p class="text-xs text-slate-600 mt-2">Полный осмотр мозговых функций, письменное заключение и карта нейромаршрута.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <div>
+                            <span class="text-lg font-black text-slate-900">3 500 ₽</span>
+                            <span class="block text-[10px] text-rose-600 font-bold">1 750 ₽ (по акции)</span>
+                        </div>
+                        <button data-open-modal="true" data-service-id="diag-full"
+                                class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700">Записаться
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600">45 минут</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Индивидуальная нейрокоррекция</h3>
+                        <p class="text-xs text-slate-600 mt-2">Развитие внимания, памяти, координации и мозжечковая стимуляция Balametrics.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-lg font-black text-slate-900">1 800 ₽</span>
+                        <button data-open-modal="true" data-service-id="session-neuro"
+                                class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700">Записаться
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600">45 минут</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Занятие с логопедом-дефектологом</h3>
+                        <p class="text-xs text-slate-600 mt-2">Запуск речи, зондовый логопедический массаж, формирование фразовой речи.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-lg font-black text-slate-900">1 600 ₽</span>
+                        <button data-open-modal="true" data-service-id="session-logoped"
+                                class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700">Записаться
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600">50 минут</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Сенсорная интеграция</h3>
+                        <p class="text-xs text-slate-600 mt-2">Занятия в оборудованном зале с гамаками, брусьями и тактильными зонами.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-lg font-black text-slate-900">1 900 ₽</span>
+                        <button data-open-modal="true" data-service-id="session-sensory"
+                                class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700">Записаться
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600">60 минут</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">АВА-терапия (Аутизм)</h3>
+                        <p class="text-xs text-slate-600 mt-2">Прикладной анализ поведения, коррекция истерик, развитие коммуникации.</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-lg font-black text-slate-900">2 200 ₽</span>
+                        <button data-open-modal="true" data-service-id="session-aba"
+                                class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700">Записаться
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-slate-50 p-6 rounded-3xl border border-slate-200 flex flex-col justify-between space-y-4">
+                    <div>
+                        <span class="text-xs font-bold text-blue-600">10–14 дней</span>
+                        <h3 class="text-lg font-bold text-slate-900 mt-1">Нейро-интенсив для иногородних</h3>
+                        <p class="text-xs text-slate-600 mt-2">Плотный комплексный курс для семей из районов края. Эффект 6 месяцев за 2 недели!</p>
+                    </div>
+                    <div class="pt-4 border-t border-slate-200 flex items-center justify-between">
+                        <span class="text-lg font-black text-slate-900">от 38 000 ₽</span>
+                        <button data-open-modal="true" data-service-id="intensive-kurss"
+                                class="px-4 py-2 rounded-xl bg-blue-600 text-white font-bold text-xs hover:bg-blue-700">Записаться
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 11. Reviews Section -->
+    <section id="reviews" class="py-16 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-bold text-xs uppercase tracking-wider">
+              Отзывы родителей
+            </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
+                    Нам доверяют самое ценное
+                </h2>
+            </div>
+
+            <!-- Badges -->
+            <div class="flex flex-wrap justify-center gap-4 text-xs font-bold">
+                <div class="px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-center gap-2">
+                    <span class="text-amber-500 text-base">★★★★★</span>
+                    <span>Яндекс Карты <strong>5.0</strong></span>
+                </div>
+                <div class="px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-center gap-2">
+                    <span class="text-amber-500 text-base">★★★★★</span>
+                    <span>ПроДокторов <strong>4.9</strong></span>
+                </div>
+                <div class="px-5 py-3 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-center gap-2">
+                    <span class="text-amber-500 text-base">★★★★★</span>
+                    <span>СберЗдоровье <strong>5.0</strong></span>
+                </div>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-md space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm">Екатерина М.</h4>
+                            <span class="text-xs text-slate-400">мама Арсения, 5 лет</span>
+                        </div>
+                        <span class="text-amber-500 font-bold">★★★★★</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Хочу сказать огромное спасибо центру «Пронейрон» и Анне Георгиевне! У Арсения были проблемы с заиканием и речью. После 2 месяцев занятий
+                        сын заговорил предложениями!
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200/80 shadow-md space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h4 class="font-extrabold text-slate-900 text-sm">Светлана В.</h4>
+                            <span class="text-xs text-slate-400">мама Ильяса, 6 лет</span>
+                        </div>
+                        <span class="text-amber-500 font-bold">★★★★★</span>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                        Проходили интенсив в Михайловске. Занятия с логопедом и нейропсихологом дают невероятный результат. Нам подробно давали задания для
+                        дома.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. FAQ Section -->
+    <section id="faq" class="py-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="text-center space-y-2">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-bold text-xs uppercase tracking-wider">
+              Частые вопросы
+            </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+                    Ответы на популярные вопросы родителей
+                </h2>
+            </div>
+
+            <div class="space-y-3">
+                <div class="faq-accordion-item border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-accordion-header w-full p-5 text-left font-bold text-slate-900 text-sm flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>Каковы основные этапы работы с ребенком и сколько времени это займет?</span>
+                        <span class="accordion-icon text-slate-400 font-bold">▼</span>
+                    </button>
+                    <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 space-y-2">
+                        <div class="py-4">
+                            1) Входная нейродиагностика; 2) Составление карты нейромаршрута; 3) Регулярные занятия 2-3 раза в неделю. Первые результаты видны
+                            уже через 3-4 недели.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-accordion-item border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-accordion-header w-full p-5 text-left font-bold text-slate-900 text-sm flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>С какого возраста можно обращаться в центр «Пронейрон»?</span>
+                        <span class="accordion-icon text-slate-400 font-bold">▼</span>
+                    </button>
+                    <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 space-y-2">
+                        <div class="py-4">
+                            Мы работаем с детьми в возрасте от 1.5 до 14 лет. Чем раньше начинается коррекция, тем выше динамика!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-accordion-item border border-slate-200 rounded-2xl overflow-hidden">
+                    <button class="faq-accordion-header w-full p-5 text-left font-bold text-slate-900 text-sm flex justify-between items-center bg-slate-50 hover:bg-slate-100 transition-colors">
+                        <span>Работаете ли вы с подтвержденными диагнозами (РАС, ДЦП, ЗПРР)?</span>
+                        <span class="accordion-icon text-slate-400 font-bold">▼</span>
+                    </button>
+                    <div class="accordion-content px-5 text-xs sm:text-sm text-slate-600 space-y-2">
+                        <div class="py-4">
+                            Да, это наш профилирующий вид работы! Все специалисты обладают профильным образованием и опытом от 8 до 12 лет.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Contacts & Map Section -->
+    <section id="contacts" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+
+            <div class="text-center max-w-3xl mx-auto space-y-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-100 text-blue-800 font-bold text-xs uppercase tracking-wider">
+              Контакты и Карта
+            </span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900">
+                    Ждем вас в Ставрополе и Михайловске
+                </h2>
+            </div>
+
+            <!-- City Selector Tabs -->
+            <div class="flex justify-center">
+                <div class="inline-flex p-1 bg-white rounded-2xl border border-slate-200">
+                    <button data-branch="stavropol"
+                            class="branch-switcher-btn px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all cursor-pointer active">г.
+                        Ставрополь
+                    </button>
+                    <button data-branch="mikhailovsk"
+                            class="branch-switcher-btn px-5 py-2.5 rounded-xl font-extrabold text-xs sm:text-sm transition-all cursor-pointer">г. Михайловск
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+
+                <!-- Left Info -->
+                <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 space-y-6 flex flex-col justify-between shadow-md">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-extrabold text-slate-900 current-branch-city">г. Ставрополь</h3>
+
+                        <div class="space-y-2 text-xs sm:text-sm text-slate-700">
+                            <p><strong>Адрес:</strong> <span class="current-branch-address">г. Ставрополь, ул. Пирогова, 15/1</span></p>
+                            <p><strong>Режим работы:</strong> <span class="current-branch-hours">Пн-Сб: 08:30 – 20:00, Вс: 09:00 – 18:00</span></p>
+                            <p><strong>Телефон:</strong> <a href="tel:79624001100" class="font-extrabold text-blue-600">+7 (962) 400-11-00</a></p>
+                            <p><strong>E-mail:</strong> logostart31@yandex.ru</p>
+                        </div>
+
+                        <div class="pt-2 grid grid-cols-2 gap-2">
+                            <a href="https://wa.me/79624001100" target="_blank"
+                               class="py-2.5 px-3 rounded-xl bg-emerald-600 text-white font-bold text-xs text-center">WhatsApp</a>
+                            <a href="https://t.me/proneuron26" target="_blank"
+                               class="py-2.5 px-3 rounded-xl bg-sky-500 text-white font-bold text-xs text-center">Telegram</a>
+                        </div>
+                    </div>
+
+                    <button data-open-modal="true"
+                            class="w-full py-3.5 rounded-xl bg-[#E60050] text-white font-extrabold text-sm hover:bg-rose-600 transition-all cursor-pointer">
+                        Записаться в этот филиал
+                    </button>
+                </div>
+
+                <!-- Right Map -->
+                <div class="lg:col-span-7 bg-slate-200 rounded-3xl overflow-hidden border border-slate-300 min-h-[360px]">
+                    <iframe id="branch-yandex-map" title="Карта" src="https://yandex.ru/map-widget/v1/?ll=41.9161,45.0225&z=16"
+                            class="w-full h-full min-h-[380px] border-0" loading="lazy"></iframe>
+                </div>
+
+            </div>
+
+            <!-- Requisites Box -->
+            <div class="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 space-y-4">
+                <h4 class="font-extrabold text-slate-900 text-sm">Юридические реквизиты:</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                        <span class="text-[10px] text-slate-400 font-bold uppercase block">Организация:</span>
+                        <span class="font-bold text-slate-900">ИП Любченко А.Г.</span>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-slate-400 font-bold uppercase block">ИНН:</span>
+                            <span class="font-bold text-slate-900">262310620474</span>
+                        </div>
+                        <button data-copy-text="262310620474" class="copy-requisite-btn text-xs text-blue-600 hover:underline">Копировать</button>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-slate-400 font-bold uppercase block">ОГРНИП:</span>
+                            <span class="font-bold text-slate-900">314265114800066</span>
+                        </div>
+                        <button data-copy-text="314265114800066" class="copy-requisite-btn text-xs text-blue-600 hover:underline">Копировать</button>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-slate-400 font-bold uppercase block">E-mail:</span>
+                            <span class="font-bold text-slate-900">logostart31@yandex.ru</span>
+                        </div>
+                        <button data-copy-text="logostart31@yandex.ru" class="copy-requisite-btn text-xs text-blue-600 hover:underline">Копировать</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<!-- 15. Footer -->
+<footer class="bg-slate-950 text-white pt-16 pb-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+            <div class="lg:col-span-2 space-y-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center font-extrabold text-white">ПН</div>
+                    <span class="font-black text-2xl tracking-tight">ПРОНЕЙРОН</span>
+                </div>
+                <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                    Детский нейропсихологический центр. Нейродиагностика, запуск речи, АВА-терапия и сенсорная интеграция в Ставрополе и Михайловске.
+                </p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-extrabold text-xs uppercase text-slate-300">Навигация</h4>
+                <ul class="space-y-2 text-xs text-slate-400">
+                    <li><a href="#conditions" class="hover:text-white">Что мы лечим</a></li>
+                    <li><a href="#services" class="hover:text-white">Услуги и Прайс</a></li>
+                    <li><a href="#specialists" class="hover:text-white">Специалисты</a></li>
+                    <li><a href="#methodology" class="hover:text-white">Авторская методика</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-extrabold text-xs uppercase text-slate-300">Адреса</h4>
+                <div class="space-y-2 text-xs text-slate-400">
+                    <p><strong>г. Ставрополь:</strong> ул. Пирогова, 15/1</p>
+                    <p><strong>г. Михайловск:</strong> ул. Ленина, 120/2</p>
+                </div>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-extrabold text-xs uppercase text-slate-300">Контакты</h4>
+                <a href="tel:79624001100" class="block text-lg font-black text-white hover:text-blue-400">+7 (962) 400-11-00</a>
+                <p class="text-xs text-slate-400">Пн-Сб: 08:30 – 20:00</p>
+            </div>
+
+        </div>
+
+        <div class="pt-8 border-t border-slate-900 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <p>© 2026 Детский нейропсихологический центр «Пронейрон». Все права защищены.</p>
+            <button id="scroll-to-top-btn" class="text-slate-400 hover:text-white font-bold cursor-pointer">Наверх ↑</button>
+        </div>
+    </div>
+</footer>
+
+<!-- 16. Appointment Modal Popup -->
+<div id="appointment-modal" class="fixed inset-0 z-50 bg-slate-900/70 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 space-y-5 shadow-2xl relative max-h-[92vh] overflow-y-auto">
+
+        <button class="modal-close-btn absolute top-4 right-4 p-2 text-slate-400 hover:text-slate-600 rounded-full hover:bg-slate-100">✕</button>
+
+        <!-- Form View -->
+        <div id="modal-form-view" class="space-y-4">
+            <div>
+                <span class="text-rose-600 font-extrabold text-xs uppercase tracking-wider block mb-1">Запись в центр «Пронейрон»</span>
+                <h3 class="text-2xl font-black text-slate-900">Заполните форму заявки</h3>
+            </div>
+
+            <form id="appointment-form" class="space-y-4">
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">1. Выберите филиал</label>
+                    <select id="modal-branch-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold">
+                        <option value="stavropol">г. Ставрополь, ул. Пирогова, 15/1</option>
+                        <option value="mikhailovsk">г. Михайловск, ул. Ленина, 120/2</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">2. Выберите услугу</label>
+                    <select id="modal-service-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold">
+                        <option value="diag-full">Экспертная нейродиагностика — 3 500 ₽</option>
+                        <option value="session-neuro">Нейрокоррекция — 1 800 ₽</option>
+                        <option value="session-logoped">Занятие с логопедом — 1 600 ₽</option>
+                        <option value="session-sensory">Сенсорная интеграция — 1 900 ₽</option>
+                        <option value="session-aba">АВА-терапия — 2 200 ₽</option>
+                        <option value="intensive-kurss">Нейро-интенсив — от 38 000 ₽</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">3. Специалист (опционально)</label>
+                    <select id="modal-specialist-select" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold">
+                        <option value="">Любой свободный специалист</option>
+                        <option value="spec-lyubchenko">Любченко Анна Георгиевна</option>
+                        <option value="spec-kozhevnikova">Кожевникова Екатерина Андреевна</option>
+                        <option value="spec-savelyeva">Савельева Марина Александровна</option>
+                        <option value="spec-ilina">Ильина Светлана Михайловна</option>
+                        <option value="spec-mashukov">Машуков Дмитрий Васильевич</option>
+                    </select>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Ваше имя *</label>
+                        <input id="modal-parent-name" type="text" required placeholder="Екатерина"
+                               class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold"/>
+                    </div>
+
+                    <div>
+                        <label class="block text-[11px] font-bold text-slate-500 uppercase mb-1">Телефон *</label>
+                        <input type="tel" required placeholder="+7 (962) 000-00-00"
+                               class="w-full px-3.5 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-xs font-semibold"/>
+                    </div>
+                </div>
+
+                <div id="modal-symptoms-notice" class="p-2.5 rounded-xl bg-blue-50 text-blue-800 text-[11px] font-semibold hidden"></div>
+
+                <button type="submit"
+                        class="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#FF1751] to-[#F42A58] text-white font-extrabold text-sm hover:shadow-lg transition-all cursor-pointer">
+                    Подтвердить запись со скидкой 50% →
+                </button>
+            </form>
+        </div>
+
+        <!-- Success View -->
+        <div id="modal-success-view" class="text-center py-6 space-y-4 hidden">
+            <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto font-black text-2xl">✓</div>
+            <h3 class="text-2xl font-extrabold text-slate-900">Заявка успешно оформлена!</h3>
+            <p class="text-xs sm:text-sm text-slate-600">
+                Спасибо, <strong id="modal-success-parent-name">уважаемый родитель</strong>! Мы забронировали для вас скидку 50%. Администратор перезвонит вам в
+                течение 10 минут.
+            </p>
+            <div class="pt-2 space-y-2">
+                <a href="https://wa.me/79624001100" target="_blank"
+                   class="w-full py-3.5 rounded-xl bg-emerald-600 text-white font-extrabold text-xs sm:text-sm hover:bg-emerald-700 transition-all flex items-center justify-center gap-2">
+                    Написать нам в WhatsApp
+                </a>
+                <button class="modal-close-btn w-full py-2.5 rounded-xl border border-slate-200 text-slate-600 text-xs font-bold hover:bg-slate-50">
+                    Вернуться на сайт
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
