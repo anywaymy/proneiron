@@ -16,7 +16,7 @@
 
 <body class="min-h-screen bg-white text-slate-900 font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
 
-<div class="bg-[#015382] text-white text-[12px] font-medium py-1.5 px-4 text-center">
+<div class="hidden bg-[#015382] text-white text-[12px] font-medium py-1.5 px-4 text-center">
     <a href="#educational" class="hover:underline transition-all inline-block">
         Подключиться к программе лояльности в МАХ
     </a>
@@ -178,7 +178,7 @@
                         </a>
                     </div>
 
-                    <div class="pt-3 flex items-center gap-4 relative">
+                    <div class="hidden pt-3 flex items-center gap-4 relative">
                         <div class="flex items-center -space-x-2.5">
                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&amp;fit=crop&amp;q=80&amp;w=100"
                                  alt="Нейропсихолог" class="w-11 h-11 rounded-full border-2 border-white object-cover shadow-2xs">
@@ -219,7 +219,7 @@
                             </svg>
                         </div>
 
-                        <div class="swiper relative z-10 w-full max-w-md drop-shadow-xl rounded-3xl overflow-hidden">
+                        <div class="hidden swiper relative z-10 w-full max-w-md drop-shadow-xl rounded-3xl overflow-hidden">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="images/slide_p1.webp" alt="Врач и ребенок — Нейроспектр"
@@ -788,7 +788,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
             <div class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-md">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div class="grid grid-cols-1 gap-8 items-center"> <!-- Если попросят добавить объект справа, то не забудь добавить lg:grid-cols-12 -->
 
                     <div class="lg:col-span-7 space-y-5">
                         <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
@@ -819,7 +819,7 @@
                         </div>
                     </div>
 
-                    <div class="lg:col-span-5 space-y-4">
+                    <div class="hidden lg:col-span-5 space-y-4">
                         <div class="bg-slate-900 rounded-2xl p-6 text-white space-y-4 shadow-lg">
                             <div class="flex items-center justify-between">
                                 <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Динамика развития</span>
@@ -953,7 +953,7 @@
             <div class="bg-gradient-to-r from-[#005FA3] via-[#015382] to-[#013554] text-white rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-2xl">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
 
-                    <div class="lg:col-span-7 space-y-6">
+                    <div class="col-span-1 lg:col-span-7 space-y-6">
                         <div class="space-y-2">
                             <span class="text-xs sm:text-sm font-bold uppercase tracking-wider text-amber-300">Ставрополь • Михайловск</span>
                             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight">
@@ -974,8 +974,8 @@
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <select class="w-full px-4 py-3 rounded-full bg-white/20 text-white text-xs sm:text-sm border border-white/30 focus:outline-hidden focus:bg-slate-800">
-                                    <option value="stavropol" class="text-slate-900">г. Ставрополь (ул. Доваторцев, 32Б)</option>
-                                    <option value="mikhaylovsk" class="text-slate-900">г. Михайловск (ул. Почтовая, 77)</option>
+                                    <option value="stavropol" class="text-slate-100">г. Ставрополь (ул. Доваторцев, 32Б)</option>
+                                    <option value="mikhaylovsk" class="text-slate-100">г. Михайловск (ул. Почтовая, 77)</option>
                                 </select>
 
                                 <select class="w-full px-4 py-3 rounded-full bg-white/20 text-white text-xs sm:text-sm border border-white/30 focus:outline-hidden focus:bg-slate-800">
@@ -994,49 +994,21 @@
                                 Записаться на консультацию
                             </button>
 
-                            <div class="bg-white/10 p-3.5 rounded-2xl border border-white/20 text-[11px] text-blue-100 flex items-start gap-2.5">
-                                <span class="text-amber-300 text-sm font-bold">💡</span>
-                                <span>
-                      <strong class="text-white">После записи мы отправим вам короткую онлайн-анкету.</strong> Её заполнение желательно, но не строго обязательно. Это поможет нашему специалисту заранее погрузиться в вашу ситуацию и сделать встречу максимально продуктивной.
-                    </span>
-                            </div>
-
                             <label class="flex items-start gap-2 text-[11px] text-white/90 cursor-pointer pt-1">
                                 <input type="checkbox" checked="" required="" class="mt-0.5 rounded text-blue-600 focus:ring-0">
                                 <span>Я даю согласие на обработку моих персональных данных и принимаю политику конфиденциальности.</span>
                             </label>
                         </form>
                     </div>
-
-                    <div class="lg:col-span-5 bg-white/10 backdrop-blur-xs p-6 sm:p-8 rounded-3xl border border-white/20 space-y-6">
-                        <h3 class="text-xl font-black text-white">Прямые телефоны филиалов:</h3>
-
-                        <div class="space-y-4">
-                            <div class="p-4 rounded-2xl bg-white/10 border border-white/15 space-y-1">
-                                <div class="text-xs text-amber-300 font-bold">г. Ставрополь, ул. Доваторцев, 32Б</div>
-                                <a href="tel:89624520202" class="text-xl font-black text-white hover:text-amber-300 transition-colors block">
-                                    8 (962) 452-02-02
-                                </a>
-                                <a href="https://yandex.ru/maps/org/proneyron/166937955100/" target="_blank" rel="noopener noreferrer"
-                                   class="text-[11px] text-blue-200 hover:underline inline-block pt-0.5">
-                                    Открыть на Яндекс Картах ↗
-                                </a>
-                            </div>
-
-                            <div class="p-4 rounded-2xl bg-white/10 border border-white/15 space-y-1">
-                                <div class="text-xs text-amber-300 font-bold">г. Михайловск, ул. Почтовая, 77</div>
-                                <a href="tel:89624001100" class="text-xl font-black text-white hover:text-amber-300 transition-colors block">
-                                    8 (962) 400-11-00
-                                </a>
-                                <a href="https://yandex.ru/maps/org/proneyron/222628262727/" target="_blank" rel="noopener noreferrer"
-                                   class="text-[11px] text-blue-200 hover:underline inline-block pt-0.5">
-                                    Открыть на Яндекс Картах ↗
-                                </a>
-                            </div>
-                        </div>
-
+                    <div class="col-span-1 lg:col-span-5 bg-white/10 p-3.5 rounded-2xl border border-white/20 text-blue-100 flex items-start gap-2.5">
+                        <span class="text-amber-300 text-md font-bold">💡</span>
+                        <p>
+                          <strong class="inline-block text-white text-2xl mb-2">После записи мы отправим вам короткую онлайн-анкету.</strong>
+                            <span class="inline-block text-xl">Её заполнение желательно, но не строго обязательно. Это поможет нашему специалисту
+                            заранее погрузиться в вашу ситуацию и сделать встречу максимально продуктивной.
+                            </span>
+                        </p>
                     </div>
-
                 </div>
             </div>
 
@@ -1059,7 +1031,7 @@
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
                             <span class="px-3 py-1 rounded-full bg-blue-100 text-[#005FA3] text-xs font-extrabold">Ставрополь</span>
-                            <span class="text-xs text-slate-500 font-medium">Ежедневно: 09:00 - 20:00</span>
+                            <span class="text-xs text-slate-500 font-medium">Ежедневно: 09:00 - 19:00</span>
                         </div>
                         <h3 class="text-xl font-extrabold text-slate-900">ул. Доваторцев, 32Б</h3>
                         <p class="text-xs sm:text-sm text-slate-600">
@@ -1087,7 +1059,7 @@
                     <div class="space-y-3">
                         <div class="flex items-center justify-between">
                             <span class="px-3 py-1 rounded-full bg-amber-100 text-[#FFA800] text-xs font-extrabold">Михайловск</span>
-                            <span class="text-xs text-slate-500 font-medium">Ежедневно: 09:00 - 20:00</span>
+                            <span class="text-xs text-slate-500 font-medium">Ежедневно: 09:00 - 19:00</span>
                         </div>
                         <h3 class="text-xl font-extrabold text-slate-900">ул. Почтовая, 77</h3>
                         <p class="text-xs sm:text-sm text-slate-600">
@@ -1280,11 +1252,11 @@
 <script src="js/swiper-bundle.min.js"></script>
 <script>
     const swiper = new Swiper('.swiper', {
+        loop: true,
         effect: 'fade',
         fadeEffect: {
             crossFade: true
         },
-        loop: true,
         slidesPerView: 1,
         watchSlidesProgress: true
     });
