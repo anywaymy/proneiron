@@ -1,13 +1,3 @@
-@font-face {
-    font-family: "CosmicSansMC";
-    src: url("../fonts/comic-sans-mc/comic-sans-ms-italique.woff2") format("woff2"),
-         url("../fonts/comic-sans-mc/comic-sans-ms-italique.woff") format("woff"),
-         url("../fonts/comic-sans-mc/comic-sans-ms-italique.ttf") format("truetype");
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-}
-
 .image-size {
     max-height: 515px;
 }
