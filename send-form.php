@@ -61,7 +61,7 @@ $message = "
     <title>Новая заявка</title>
 </head>
 <body style='font-family: Arial, sans-serif; color: #333; line-height: 1.5;'>
-    <h2 style='color: #FF004B;'>Новая заявка с сайта logostart26.ru</h2>
+    <h2 style='color: #FF004B;'>Новая заявка с сайта proneiron.ru</h2>
     <p><strong>Имя:</strong> " . htmlspecialchars($name, ENT_QUOTES, 'UTF-8') . "</p>
     <p><strong>Телефон:</strong> " . htmlspecialchars($phone, ENT_QUOTES, 'UTF-8') . "</p>
     <p><strong>Филиал:</strong> " . htmlspecialchars($branch, ENT_QUOTES, 'UTF-8') . "</p>
@@ -73,7 +73,7 @@ $message = "
 
 $headers  = "MIME-Version: 1.0\r\n";
 $headers .= "Content-Type: text/html; charset=utf-8\r\n";
-$headers .= "From: =?UTF-8?B?" . base64_encode("Логостарт") . "?= <{$fromEmail}>\r\n";
+$headers .= "From: =?UTF-8?B?" . base64_encode("Пронейрон") . "?= <{$fromEmail}>\r\n";
 $headers .= "Reply-To: {$fromEmail}\r\n";
 $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
 
